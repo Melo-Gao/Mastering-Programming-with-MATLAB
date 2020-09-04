@@ -1,0 +1,10 @@
+function log = palindrome(stri)
+log = true;
+    if length(stri) < 1
+        log = true;
+    elseif stri(1) ~= stri(length(stri))
+        log = false;
+    else
+    log = palindrome(stri(2:length(stri)-1));
+    end
+end
