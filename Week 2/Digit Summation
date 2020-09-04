@@ -1,0 +1,7 @@
+function output = digit_sum(a)
+    if mod(a, 10) == a;
+        output = a;
+    else
+        output = mod(a, 10) + digit_sum((a-mod(a, 10))/10);
+    end
+end
