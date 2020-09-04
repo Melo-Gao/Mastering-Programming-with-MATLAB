@@ -1,0 +1,8 @@
+function f = fibor(n)
+    if n == 1 || n == 2
+        f = ones(1, n);
+    else
+        f = fibor(n-1);
+        f = [f, f(end)+f(end-1)]
+
+end
