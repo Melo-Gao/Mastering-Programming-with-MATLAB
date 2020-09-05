@@ -1,0 +1,12 @@
+function edg = edgy(cc)
+    [rows cols] = size(cc);
+    cc=double(cc);
+    for i = 2:rows-1
+        for j = 2:cols-1
+            sx = -1*cc(i-1,j-1) + -2*cc(i,j-1) + -1*cc(i+1,j-1) + 1*cc(i-1,j+1) + 2*cc(i,j+1) + 1*cc(i+1,j+1);
+            sy = 2*cc(i-1,j) + 1*cc(i-1,j+1) + 1*cc(i-1,j-1) + -2*cc(i+1,j) + -1*cc(i+1,j+1) + -1*cc(i+1,j-1);
+            edg(i-1,j-1) = sqrt(sx.^2+sy.^2);
+        end
+    end
+    edg = uint8(edg);
+end
