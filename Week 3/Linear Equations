@@ -1,0 +1,8 @@
+function [a b] = lin_reg(x,y)
+    x = x';
+    x = [x, ones(size(x))];
+    y = y';
+    M = (x\y);
+    a = M(1);
+    b = M(2);
+end
