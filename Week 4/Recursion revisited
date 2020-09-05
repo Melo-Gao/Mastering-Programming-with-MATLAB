@@ -1,0 +1,7 @@
+function v = reversal(v)
+    if length(v) > 1
+        l = ceil(length(v)/2);
+        v = [reversal(v(l+1:end)), reversal(v(1:l))];
+    end
+end
+        
