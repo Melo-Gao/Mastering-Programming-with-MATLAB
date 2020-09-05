@@ -1,0 +1,7 @@
+function grade = grader(x,y,varargin)
+M = zeros(1,nargin-2);
+for i=1:nargin-2
+   M(i)=isequal(x(varargin{i}),y(varargin{i}));
+end
+grade = isequal(M, ones(1,length(M)));
+end
